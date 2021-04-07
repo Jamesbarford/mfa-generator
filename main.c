@@ -1,17 +1,10 @@
-#include <errno.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <liboath/oath.h>
-#include <string.h>
-#include <sys/stat.h>
 #include <termios.h>
 #include <time.h>
-#include <unistd.h>
+#include <liboath/oath.h>
 
-#include "./includes/readinfile.h"
 #include "./includes/base64tohex.h"
 #include "./includes/bytestobase64.h"
+#include "./includes/readinfile.h"
 #include "./decrypt.h"
 #include "./encrypt.h"
 
@@ -64,7 +57,7 @@ static void print_usage(char *progname) {
 			"         help\n", progname);
 }
 
-// Get command line options and validate that they are valid.
+// Get command line options and validate.
 static void get_cmd_opts(cmd_opts_t *cmd_opts, int argc, char **argv) {
 	char c;
 	cmd_opts->flag = 0;
