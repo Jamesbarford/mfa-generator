@@ -1,0 +1,4 @@
+build
+*.enc
+tags
+generate_mfa
