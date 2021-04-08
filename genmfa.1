@@ -1,0 +1,40 @@
+.TH genmfa 1
+.SH NAME
+generate_mfa \- generate mfa tokens from the command line
+.SH SYNOPSIS
+.B generate_mfa
+[s:g:d]
+.SH DESCRIPTION
+A secure command line tool for storing secret keys to subsequently generate MFA tokens from them.
+
+.B -s
+.I <name_of_service>
+.RS
+Set a secret key for specified name of service. This will prompt for a password that for first time usage be used to encrypt the file used for storing tokens or if on subsequent usage be used to decrypt the file append the new service <-> secret key pairing and enrpyt the file.
+.RE
+
+.B -g
+.I <name_of_service>
+.RS
+Issue an MFA token for a specified service. This will prompt for the password used to enrpyt the file, then on success generate an MFA token which expires in 30 seconds.
+.RE
+
+.B -h
+help
+
+.IN
+-s
+Set a secret key
+
+.PP
+The named
+.IR file s
+area read an interpreted in order.
+If no
+.I file
+is given ot if 
+.I file
+is given
+.SH EXAMPLES
+.SH AUTHORS
+.SH REPORTING  BUGS
