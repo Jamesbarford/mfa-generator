@@ -1,6 +1,6 @@
 OBJ_DIR	= ./build
 SRC = .
-TARGET = generate_mfa
+TARGET = genmfa
 CFLAGS = -Wall -Werror -Wextra -Wpedantic -Wno-shadow -O2
 CC = cc
 

@@ -1,4 +1,4 @@
-# MFA token generator: WIP
+# MFA token generator: `genmfa` WIP
 
 ## Motivation:
 
@@ -26,7 +26,7 @@ From the command line for multiple services. As an alternative to something like
 Example to get an mfa token
 
 ```
-$ generate_mfa -g aws
+$ genmfa -g aws
 ```
 
 `-g` denotes get, followed by the name of the service/company/etc... name
@@ -42,7 +42,7 @@ On success a `6` digit mfa token will be generated e.g: `786124`
 ### Print usage
 
 ```
-$ generate_mfa -h
+$ genmfa -h
 ```
 
 ### Set a secret key
@@ -50,7 +50,7 @@ $ generate_mfa -h
 Example to set an access key by which to generate authentication tokens.
 
 ```
-$ generate_mfa -s aws
+$ genmfa -s aws
 ```
 
 `-s` denotes set, followed by the name of the service/company/etc... to store the key against
