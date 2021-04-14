@@ -248,7 +248,7 @@ void write_to_new(char *plaintext, unsigned char *pass) {
 		exit(EXIT_FAILURE);
 	}
 
-	if (chmod(token_file, S_IRUSR | S_IROTH | S_IWUSR | S_IWRITE) == -1) {
+	if (fchmod(fd, S_IRUSR | S_IROTH | S_IWUSR | S_IWRITE) == -1) {
 		fprintf(stderr, "Failed to chmod '%s': %s\n", token_file, strerror(errno));
 		exit(EXIT_FAILURE);
 	}
